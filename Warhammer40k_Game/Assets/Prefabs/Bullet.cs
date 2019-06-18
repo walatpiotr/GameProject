@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
 
         Vector2 bullet_real_speed = direction.normalized * speed ;
         rb.velocity = bullet_real_speed;
-        Debug.Log("velocity: " + Mathf.Sqrt(Mathf.Pow(rb.velocity[0],2) + Mathf.Pow(rb.velocity[1],2)));
+        //Debug.Log("velocity: " + Mathf.Sqrt(Mathf.Pow(rb.velocity[0],2) + Mathf.Pow(rb.velocity[1],2)));
     }
 
 

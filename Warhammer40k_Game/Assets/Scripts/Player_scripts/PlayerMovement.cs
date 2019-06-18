@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     public float speed = 10f;
-    private float rotation_speed = 5f;
+    //private float rotation_speed = 5f;
     
 
     private Rigidbody2D rb_player;

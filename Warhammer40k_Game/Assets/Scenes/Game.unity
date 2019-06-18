@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94724481}
   - component: {fileID: 94724482}
+  - component: {fileID: 94724483}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: firepoint
@@ -176,6 +177,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -199,6 +201,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &94724483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94724480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a4108c6a64e1e4cbd21e7658887ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 94724481}
+  bulletPrefab: {fileID: 2555359504229507052, guid: 0557ea318b48d4e48925fb6fc4af0e8c,
+    type: 3}
 --- !u!1 &1226918728
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +256,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1425556109}
   - component: {fileID: 1425556110}
-  - component: {fileID: 1425556108}
   - component: {fileID: 1425556113}
   - component: {fileID: 1425556114}
   - component: {fileID: 1425556112}
@@ -252,21 +268,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1425556108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425556107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a4108c6a64e1e4cbd21e7658887ea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 94724481}
-  bulletPrefab: {fileID: 2555359504229507052, guid: 0557ea318b48d4e48925fb6fc4af0e8c,
-    type: 3}
 --- !u!4 &1425556109
 Transform:
   m_ObjectHideFlags: 0
@@ -357,6 +358,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -392,7 +394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d059663c520e5b4ba27ff047d03b2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation_speed: 5
 --- !u!114 &1425556115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +546,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

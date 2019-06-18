@@ -6,22 +6,34 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+
+
+    private float fire_speed = 0.2f;
+    private float cooldown = 0f;
     void Start()
     {
-        
+        firePoint = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
+    {   
+        cooldown -= Time.deltaTime;
+        Debug.Log(cooldown);
+        if (Input.GetButton("Fire1"))
         {
-            Shoot();
+            if (cooldown <= 0f)
+            {
+                Shoot();
+
+            }
+            
         }
     }
 
     void Shoot()
     {
+        
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        cooldown = fire_speed;
     }
 }
